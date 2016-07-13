@@ -1,0 +1,90 @@
+﻿【VMEnvironment】
+
+
+------------------------------------------------------------------------------------------------------------------------
+概要
+　　各VMの環境設定のメモ
+
+------------------------------------------------------------------------------------------------------------------------
+各種OS
+　[Ubuntu 14.04 64bit LTS / VMware Player]
+　　・katagaitai 勉強会 setup
+　　　　→commands／katagaitai勉強会
+
+　　・mongoDB
+　　　　→sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+　　　　　echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
+　　　　　sudo apt-get update
+　　　　　sudo apt-get install -y mongodb-org
+
+　　　　　sudo service mongod start
+　　　　　sudo service mongod stop
+
+　　・node.js
+　　　　→sudo apt-get update
+　　　　　sudo apt-get install nodejs npm
+
+　　・セキュリティコンテストチャレンジブック
+　　　　→上記katagaitaiのsetupで入ってないもののみ記入
+　　　　　export PATH=$HOME/bin:$PATH
+　　　　　mkdir $HOME/bin
+　　　　　wget https://github.com/downloads/0vercl0k/rp/rp-lin-x64 -O $HOME/bin/rp
+　　　　　wget https://github.com/slimm609/checksec.sh/archive/1.6.tar.gz
+　　　　　tar zxvf 1.6.tar.gz
+　　　　　cp checksec.sh-1.6/checksec $HOME/bin/checksec.sh
+
+　　・ディレクトリ内から端末
+　　　　→sudo apt-get install nautilus-open-terminal
+　　　　　nautilus -q
+
+　　・scapy
+　　　　→sudo apt-get install scapy
+
+　　・uuencode, uudecode
+　　　　→sudo apt-get install sharutils
+
+　　・curl
+　　　　→sudo apt-get install curl
+
+　　・Autospy
+　　　　→sudo apt-get install autopsy
+　　　　　(http://cyberforensics.et.byu.edu/wiki/Install_Sleuthkit)
+
+　　・nmap
+　　　　→sudo apt-get install nmap
+
+　　・JDK(Java Development Kit)
+　　　　→sudo apt-get install default-jdk
+
+　　・cbc(C flat Compiler)
+　　　　→wget http://i.loveruby.net/archive/cbc/cbc-1.0.tar.gz
+　　　　　tar xzf cbc-1.0.tar.gz
+　　　　　sudo ./install.sh
+
+　　・pngcheck
+　　　　→sudo apt-get install pngcheck
+
+　　・HashPump
+　　　　→git clone https://github.com/bwall/HashPump.git
+　　　　　apt-get install g++ libssl-dev
+　　　　　cd HashPump
+　　　　　make
+　　　　　make install
+
+　　　　　sudo apt-get install python-pip
+　　　　　pip install hashpumpy
+
+　　・Wireshark
+　　　　→sudo apt-get install wireshark
+
+
+　[CentOS 5.11 32bit / VirtualBox]
+　　・FTPサーバー
+　　　　→yum install vsFTPd
+
+
+　[kali-linux 1.1.0a 64bit / VirtualBox]
+
+------------------------------------------------------------------------------------------------------------------------
+
+http://famasoon.hatenablog.com
